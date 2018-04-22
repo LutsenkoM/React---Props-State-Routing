@@ -1,34 +1,25 @@
 import React, { Component } from 'react';
-import Dropdown from './Dropdown';
-import logo from './logo.svg';
-import './App.css';
+import { Link } from 'react-router-dom';
 
-const dropdownData = {
-    title: 'Dropdown title',
-    content: [
-      {
-        contentItem: 'Dropdown Content 1'
-      },
-      {
-        contentItem: 'Dropdown Content 2'
-      },
-      {
-        contentItem: 'Dropdown Content 3'
-      },
-    ]
-  }
+import Main from './Main';
+
+
 
 
 class App extends Component {
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
+            <ul>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/about">About</Link></li>
+                <li><Link to="/contact">Contact</Link></li>
+            </ul>
         </header>
-
-        <Dropdown data={dropdownData} />
+          <Main/>
       </div>
     );
   }
